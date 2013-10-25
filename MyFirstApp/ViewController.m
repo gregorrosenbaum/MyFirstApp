@@ -14,10 +14,18 @@
 
 @implementation ViewController
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+- (IBAction)Change:(id)sender {
+    static int number_of_clicks = 0;
+    NSLog(@"Clicked");
+    _myLabel.text = [NSString stringWithFormat:@"Click: %d", number_of_clicks++];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
